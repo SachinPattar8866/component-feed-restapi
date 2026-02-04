@@ -1,0 +1,16 @@
+# Ignore local virtualenvs and temporary artifacts
+__temp/
+venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# DB (if you want to keep DB out of repo)
+# db.sqlite3
+
+# Node (backend only) - don't commit node packages or lockfiles
+node_modules/
+package-lock.json
+package.json
