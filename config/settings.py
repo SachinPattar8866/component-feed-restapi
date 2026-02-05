@@ -49,9 +49,9 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -59,6 +59,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
 
 ROOT_URLCONF = 'config.urls'
 
@@ -157,12 +158,16 @@ CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:5173",
     "http://localhost:5174",
     "http://127.0.0.1:5174",
+    "https://community-feed.netlify.app",
 ]
 
 CORS_ALLOW_CREDENTIALS = True
 
 # Development helper: allow all origins temporarily (set False in production)
-CORS_ALLOW_ALL_ORIGINS = os.environ.get('CORS_ALLOW_ALL_ORIGINS', 'True').lower() in ('1', 'true')
+CORS_ALLOW_ALL_ORIGINS = os.environ.get(
+    'CORS_ALLOW_ALL_ORIGINS',
+    'False'
+).lower() in ('1', 'true')
 
 # Ensure Authorization header is allowed and exposed to the browser
 CORS_ALLOW_HEADERS = list(default_headers) + [
