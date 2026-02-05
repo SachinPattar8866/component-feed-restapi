@@ -5,5 +5,5 @@ django-cors-headers==4.3.1
 django-mptt==0.16.0
 gunicorn==21.2.0
 dj-database-url==1.0.0
-psycopg[binary]>=3.0
+psycopg2-binary==2.9.9
 whitenoise==6.5.0
