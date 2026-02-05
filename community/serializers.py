@@ -41,7 +41,6 @@ class LeaderboardUserSerializer(serializers.ModelSerializer):
         model = User
         fields = ['id', 'username', 'karma_24h']
 
-
 class RecursiveCommentSerializer(serializers.ModelSerializer):
     """Recursive serializer for nested comments"""
     author = serializers.StringRelatedField()

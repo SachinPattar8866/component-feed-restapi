@@ -15,7 +15,6 @@ from .serializers import (
     LeaderboardUserSerializer
 )
 
-
 class PostViewSet(viewsets.ModelViewSet):
     """ViewSet for posts with optimized queries"""
     serializer_class = PostSerializer

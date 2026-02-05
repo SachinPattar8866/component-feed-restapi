@@ -143,3 +143,4 @@ class Like(models.Model):
         if self.post:
             return f"{self.user.username} likes post {self.post.id}"
         return f"{self.user.username} likes comment {self.comment.id}"
+    

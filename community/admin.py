@@ -33,3 +33,4 @@ class CommentAdmin(MPTTModelAdmin):
 class LikeAdmin(admin.ModelAdmin):
     list_display = ['id', 'user', 'post', 'comment', 'created_at']
     list_filter = ['created_at']
+    
